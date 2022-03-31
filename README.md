@@ -1,2 +1,2 @@
-# http://pauloafa_github.io
+# http://pauloafa.github.io
 My personal website
