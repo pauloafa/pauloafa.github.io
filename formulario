@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulario Gama Academy</title>
+
+    <style>
+        #cadastro {
+            background-color: aqua;
+            font-family: Verdana, Geneva, Tahoma, sans-serif;
+        }
+    </style>
+
+    <script>
+        function checar_senhas() {
+            var senha1 = cadastro.senha_cliente.value;
+            var senha2 = cadastro.senha_cliente2.value;
+            if (senha1 == "")
+                alert("Por favor, digite a senha");
+            else if (senha2 == "")
+                alert("Por favor, confirme sua senha");
+            else if (senha1 != senha2) {
+                alert("Prezado cliente, por gentileza, preenchas as duas senha de maneira igual");
+                return false;
+            } else {
+                alert("Obrigado!");
+            }
+        }
+    </script>
+
+</head>
+
+<body>
+    <form id="cadastro" method="post">
+        <fieldset>
+            <legend><strong>Preencha os dados abaixo para se cadastrar na nossa plataforma</strong></legend>
+            <label>Nome:</label>
+            <input type="text" name="nome_cliente" required placeholder="Digite seu nome"><br><br>
+            <label>Email:</label>
+            <input type="email" name="email_cliente" required placeholder="Digite seu email"><br><br>
+            <label>Senha:</label>
+            <input type="password" name="senha_cliente" required placeholder="Digite sua senha"><br><br>
+            <label>Repita a senha:</label>
+            <input type="password" name="senha_cliente2" required placeholder="Repita a senha">
+            <input type="submit" value="Enviar"><br>
+        </fieldset>
+
+</body>
+
+</html>
